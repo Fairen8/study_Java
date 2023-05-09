@@ -1,7 +1,7 @@
 package Уроки.les12;
 //ООП: классы и объекты
 //Транспорт
-public class les12_2 {
+public class Transport {
     public float speed;
     public int weight;
     public String color;
