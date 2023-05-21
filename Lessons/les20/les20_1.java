@@ -1,6 +1,6 @@
 package Lessons.les20;
-//Построение ПК приложений
 public class les20_1 {
+//Построение ПК приложений
 
     public static void main(String[] args) {
         ContactForm form = new ContactForm();
