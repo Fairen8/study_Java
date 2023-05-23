@@ -1,5 +1,5 @@
 package Lessons.les8;
-//Массиви данных
+//Массивы данных
 public class les8_1 {
     public static void main(String[] args) {
         int[] nums = new int[5]; //Создаём массив и выделяем ему память для 5-ти элементов
