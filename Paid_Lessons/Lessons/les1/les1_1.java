@@ -1,4 +1,4 @@
-package Lessons.Paid.les1;
+package Paid_Lessons.Lessons.les1;
 //Синтаксис
 public class les1_1 {
     public static void main(String[] args) {
