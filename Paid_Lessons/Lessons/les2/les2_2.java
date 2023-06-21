@@ -1,4 +1,5 @@
 package Paid_Lessons.Lessons.les2;
+//Переменные и типы данных
 import java.util.Scanner;
 public class les2_2 {
     public static void main(String[] args) {
