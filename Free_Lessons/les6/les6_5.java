@@ -1,4 +1,4 @@
-package Lessons.les6;
+package Free_Lessons.les6;
 //Условные конструкции
 //Более продвинутый калькулятор
 import java.util.Scanner;

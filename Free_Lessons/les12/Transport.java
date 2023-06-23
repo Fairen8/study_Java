@@ -1,4 +1,4 @@
-package Lessons.les12;
+package Free_Lessons.les12;
 //ООП: классы и объекты
 //Транспорт
 public class Transport {

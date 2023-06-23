@@ -1,4 +1,4 @@
-package Lessons.les5;
+package Free_Lessons.les5;
 //Примитивный калькулятор
 import java.util.Scanner;
 

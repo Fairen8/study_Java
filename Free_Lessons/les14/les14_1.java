@@ -1,4 +1,4 @@
-package Lessons.les14;
+package Free_Lessons.les14;
 //Наследование
 public class les14_1 {
     public static void main(String[] args) {

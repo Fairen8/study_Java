@@ -1,4 +1,4 @@
-package Lessons.les8;
+package Free_Lessons.les8;
 //Многомерные масивы данных
 public class les8_4 {
     public static void main(String[] args) {

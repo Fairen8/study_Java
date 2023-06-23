@@ -1,4 +1,4 @@
-package Lessons.les6;
+package Free_Lessons.les6;
 //Условные конструкции
 public class les6_1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lessons.les17;
+package Free_Lessons.les17;
 //Вложения и анонимные классы
 public class les17_1 {
     public static void main(String[] args) {

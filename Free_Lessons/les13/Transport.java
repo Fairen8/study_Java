@@ -1,4 +1,4 @@
-package Lessons.les13;
+package Free_Lessons.les13;
 public class Transport {
     private float speed;
     private int weight;

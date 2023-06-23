@@ -1,4 +1,4 @@
-package Lessons.les19;
+package Free_Lessons.les19;
 public abstract class Transport {
     protected float speed;
     private int weight;

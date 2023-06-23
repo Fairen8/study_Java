@@ -1,4 +1,4 @@
-package Lessons.les9;
+package Free_Lessons.les9;
 //Коллекции в Java
 //LinkedList
 import java.util.LinkedList;

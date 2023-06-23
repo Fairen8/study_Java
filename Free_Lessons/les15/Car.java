@@ -1,4 +1,4 @@
-package Lessons.les15;
+package Free_Lessons.les15;
 
 public class Car extends Transport {
     public Car(float _speed, int _weight, String _color, byte[] _coordinate) {

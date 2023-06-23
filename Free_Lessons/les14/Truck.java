@@ -1,4 +1,4 @@
-package Lessons.les14;
+package Free_Lessons.les14;
 
 public class Truck extends Transport {
 

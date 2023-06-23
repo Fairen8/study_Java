@@ -1,4 +1,4 @@
-package Lessons.les16;
+package Free_Lessons.les16;
 //Абстрактный классы и методы
 public class les16_1 {
     public static void main(String[] args) {

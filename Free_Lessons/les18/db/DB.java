@@ -1,4 +1,4 @@
-package Lessons.les18.db;
+package Free_Lessons.les18.db;
 
 public class DB {
 

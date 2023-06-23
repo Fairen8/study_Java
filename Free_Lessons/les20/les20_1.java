@@ -1,4 +1,4 @@
-package Lessons.les20;
+package Free_Lessons.les20;
 public class les20_1 {
 //Построение ПК приложений
 

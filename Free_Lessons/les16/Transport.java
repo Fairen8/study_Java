@@ -1,4 +1,4 @@
-package Lessons.les16;
+package Free_Lessons.les16;
 public abstract class Transport {
     protected float speed;
     private int weight;

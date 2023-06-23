@@ -1,4 +1,4 @@
-package Lessons.les7;
+package Free_Lessons.les7;
 //Циклы
 //for()
 public class les7_1 {

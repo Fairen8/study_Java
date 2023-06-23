@@ -1,4 +1,4 @@
-package Lessons.les5;
+package Free_Lessons.les5;
 //Операции
 import java.util.Scanner;
 

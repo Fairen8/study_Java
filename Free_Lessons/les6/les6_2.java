@@ -1,4 +1,4 @@
-package Lessons.les6;
+package Free_Lessons.les6;
 //Условные конструкции
 //Несколько условий
 public class les6_2 {

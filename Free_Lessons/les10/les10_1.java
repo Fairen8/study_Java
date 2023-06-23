@@ -1,4 +1,4 @@
-package Lessons.les10;
+package Free_Lessons.les10;
 //Методы
 public class les10_1 {
     public static void main(String[] args){

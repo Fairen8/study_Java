@@ -1,4 +1,4 @@
-package Lessons;
+package Free_Lessons.les4;
 //Переменные и типы данных
 
 public class les4 {

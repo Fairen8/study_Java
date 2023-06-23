@@ -1,4 +1,4 @@
-package Lessons;
+package Free_Lessons.les3;
 //Вывод значений
 
 public class les3

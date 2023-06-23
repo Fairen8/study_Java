@@ -1,4 +1,4 @@
-package Lessons.les18;
+package Free_Lessons.les18;
 
 public final class Person {
 

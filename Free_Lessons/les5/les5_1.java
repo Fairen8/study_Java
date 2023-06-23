@@ -1,4 +1,4 @@
-package Lessons.les5;
+package Free_Lessons.les5;
 //Данные от пользователя
 
 import java.util.Scanner;  //Импортируем встроенну библиотеку

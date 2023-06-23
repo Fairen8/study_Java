@@ -1,4 +1,4 @@
-package Lessons.les8;
+package Free_Lessons.les8;
 //Массивы данных
 public class les8_2 {
     public static void main(String[] args) {

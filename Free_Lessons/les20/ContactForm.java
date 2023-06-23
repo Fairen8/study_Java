@@ -1,4 +1,4 @@
-package Lessons.les20;
+package Free_Lessons.les20;
 
 import javax.swing.*;
 import java.awt.*;

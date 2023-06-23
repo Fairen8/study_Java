@@ -1,4 +1,4 @@
-package Lessons.les19;
+package Free_Lessons.les19;
 //Интерфейсы в Джава
 public class les19_1 {
     public static void main(String[] args) {

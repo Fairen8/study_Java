@@ -1,7 +1,7 @@
-package Lessons.les18;
+package Free_Lessons.les18;
 //Пакеты, перегрузки, модификатор static
 
-import Lessons.les18.db.DB;
+import Free_Lessons.les18.db.DB;
 public class les18_1 {
     public static void main(String[] args) {
 

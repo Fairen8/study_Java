@@ -1,4 +1,4 @@
-package Lessons.les12;
+package Free_Lessons.les12;
 //ООП: классы и объекты
 public class les12_1 {
     public static void main(String[] args) {

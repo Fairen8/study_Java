@@ -1,4 +1,4 @@
-package Lessons.les8;
+package Free_Lessons.les8;
 //Массывы Данных
 //Практическое применение
 import java.util.Scanner;
