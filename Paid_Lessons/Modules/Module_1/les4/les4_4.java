@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les4;
+package Paid_Lessons.Modules.Module_1.les4;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

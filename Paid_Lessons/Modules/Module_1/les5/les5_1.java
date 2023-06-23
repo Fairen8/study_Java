@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les5;
+package Paid_Lessons.Modules.Module_1.les5;
 //Циклы
 public class les5_1 {
     public static  void main(String[] args) {

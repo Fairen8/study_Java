@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les4;
+package Paid_Lessons.Modules.Module_1.les4;
 //Массивы
 public class les4_1 {
     public static void main(String[] args) {

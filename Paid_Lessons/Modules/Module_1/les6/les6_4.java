@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les6;
+package Paid_Lessons.Modules.Module_1.les6;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les3;
+package Paid_Lessons.Modules.Module_1.les3;
 //Условные операторы
 import java.util.Scanner;
 public class les3_1 {

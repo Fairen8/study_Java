@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les2;
+package Paid_Lessons.Modules.Module_1.les2;
 //Переменные и типы данных
 public class les2_1 {
     public static void main(String[] args) {

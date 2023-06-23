@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les5;
+package Paid_Lessons.Modules.Module_1.les5;
 import java.util.ArrayList;
 
 public class les5_5 {
