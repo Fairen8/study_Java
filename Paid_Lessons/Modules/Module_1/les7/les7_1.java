@@ -1,4 +1,4 @@
-package Paid_Lessons.Lessons.les7;
+package Paid_Lessons.Modules.Module_1.les7;
 
 public class les7_1 {
     public static void main(String[] args) {
