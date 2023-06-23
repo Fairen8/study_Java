@@ -1,6 +1,6 @@
 package Paid_Lessons.Modules.Module_1.les5;
 
-public class    les5_4 {
+public class les5_4 {
     public static void main(String[] args) {
         int[][] big_nums = new int[][] {
                 {5, 746, 2, 825},
