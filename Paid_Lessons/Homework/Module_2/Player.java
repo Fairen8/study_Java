@@ -1,30 +1,9 @@
 package Paid_Lessons.Homework.Module_2;
 
-import java.util.Random;
+public abstract class Player {
+    protected String name;
+    protected VARIANTS choice;
 
-public class Player {
-    private String name = "Bot";
-    private VARIANTS choice;
-
-    public Player(VARIANTS choice, String name) {
-        this.choice = choice;
-        this.name = name;
-    }
-
-    public Player() {
-        Random r = new Random();
-        int x = r.nextInt(3);
-        switch (x) {
-            case 0:
-                this.choice = VARIANTS.ROCK;
-                break;
-            case 1:
-                this.choice = VARIANTS.SCISSORS;
-                break;
-            case 2:
-                this.choice = VARIANTS.PAPER;
-        }
-    }
     public String whoWins(Player firstPlayer,Player secondPlayer) {
         if (firstPlayer.choice == secondPlayer.choice)
             return "Ничья";
@@ -36,6 +15,7 @@ public class Player {
             case SCISSORS:
                 return (secondPlayer.choice == VARIANTS.PAPER ? firstPlayer.name : secondPlayer.name);
         }
-        return null; //Бесполезная строка, но без неё выдаётся ошибка
+        return null;
     }
+
 }
