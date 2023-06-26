@@ -9,13 +9,16 @@ public abstract class Player {
             return "Ничья";
         switch (firstPlayer.choice) {
             case ROCK:
-                return (secondPlayer.choice == VARIANTS.SCISSORS ? firstPlayer.name : secondPlayer.name);
+                return (secondPlayer.choice == VARIANTS.SCISSORS ? win(firstPlayer.name) : win(secondPlayer.name));
             case PAPER:
-                return (secondPlayer.choice == VARIANTS.ROCK ? firstPlayer.name : secondPlayer.name);
+                return (secondPlayer.choice == VARIANTS.ROCK ? win(firstPlayer.name) : win(secondPlayer.name));
             case SCISSORS:
-                return (secondPlayer.choice == VARIANTS.PAPER ? firstPlayer.name : secondPlayer.name);
+                return (secondPlayer.choice == VARIANTS.PAPER ? win(firstPlayer.name) : win(secondPlayer.name));
         }
         return null;
+    }
+    private String win(String Player) {
+        return "Победил игрок с именем: " + Player;
     }
 
 }

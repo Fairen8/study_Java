@@ -1,5 +1,6 @@
 package Paid_Lessons.Modules.Module_2.les6;
 
+
 public class Child extends Base {
     /*Анотации являются подписями наших действи в коде.
     Они используются для большей читаемости кода*/
