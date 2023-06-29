@@ -1,6 +1,4 @@
-package Paid_Lessons.Modules.Module_4.les_1;
-
-import Paid_Lessons.Modules.Module_4.DB; //Импортируем наш класс для работы с базой данных, т.к. они в разных папках
+package Paid_Lessons.Modules.Module_4.les1;
 
 import java.sql.SQLException;
 

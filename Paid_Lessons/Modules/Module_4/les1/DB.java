@@ -1,9 +1,8 @@
-package Paid_Lessons.Modules.Module_4;
+package Paid_Lessons.Modules.Module_4.les1;
 
 import java.sql.Connection; //Библиотека для подключения к базе данных
-import java.sql.DriverManager; //Библиотека для подключения к базе данных
 import java.sql.SQLException;
-
+import java.sql.DriverManager; //Библиотека для подключения к базе данных
 
 public class DB {
     //Класс для работы с базой данных MySQL
@@ -18,17 +17,16 @@ public class DB {
     private Connection dbConn = null;
 
     private Connection getDbConnection() throws ClassNotFoundException, SQLException {
-        String connstr = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
+        String connStr = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
         Class.forName("com.mysql.cj.jdbc.Driver");
 
-        dbConn = DriverManager.getConnection(connstr, LOGIN, PASS);
-
+        dbConn = DriverManager.getConnection(connStr, LOGIN, PASS);
         return dbConn;
     }
 
     public void isConnected() throws SQLException, ClassNotFoundException {
         dbConn = getDbConnection();
-        System.out.println(dbConn.isValid(5000));
+        System.out.println(dbConn.isValid(1000));
     }
 
 }
