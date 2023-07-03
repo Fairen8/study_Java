@@ -5,3 +5,6 @@ git commit -m "New commit"
 
 git branch newBranch
 git checkout newBranch
+git checkout master
+
+git push -u origin master
