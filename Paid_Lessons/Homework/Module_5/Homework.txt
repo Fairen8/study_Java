@@ -1,5 +1,7 @@
 git init
 
-
 git add -A
 git commit -m "New commit"
+
+git branch newBranch
+git checkout newBranch

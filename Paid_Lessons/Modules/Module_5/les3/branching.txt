@@ -1,0 +1,8 @@
+git branch newBranch
+git checkout newBranch
+
+git add -A
+git commit -m "commit in New branch"
+
+git checkout master
+git merge newBranch
