@@ -6,3 +6,10 @@
 
 /.idea/
 
+/Paid_Lessons/Modules/Module_6/.idea/
+/Paid_Lessons/Modules/Module_6/.gitignore
+/Paid_Lessons/Modules/Module_6/build.gradle
+/Paid_Lessons/Modules/Module_6/gradlew
+/Paid_Lessons/Modules/Module_6/gradlew.bat
+/Paid_Lessons/Modules/Module_6/settings.gradle
+/Paid_Lessons/Modules/Module_6/gradle/wrapper/
