@@ -1,5 +1,7 @@
 import les1.les1_1;
 import org.junit.jupiter.api.Test;
+//Описание всех функций
+//https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html
 
 public class les1_1_Test {
     @Test
