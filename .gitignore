@@ -4,7 +4,7 @@
 /Paid_Lessons/Modules/Module_3/les4/les4_2/main.i
 /Paid_Lessons/Homework/Module_3/some.data
 
-/.idea/
+*/.idea/
 
 /Paid_Lessons/Modules/Module_6/.idea/
 /Paid_Lessons/Modules/Module_6/.gitignore
@@ -24,5 +24,6 @@
 /Paid_Lessons/Homework/Module_6/.gradle/
 /Paid_Lessons/Homework/Module_6/build/
 
-/out/
+*/out/
 /training.iml
+
