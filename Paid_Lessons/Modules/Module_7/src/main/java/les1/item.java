@@ -1,3 +1,5 @@
+package les1;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
