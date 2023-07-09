@@ -24,8 +24,8 @@ public class Main {
             entityTransaction = entityManager.getTransaction();
             entityTransaction.begin();
 
-            Item item = new Item(name, price, info);
-            entityManager.persist(item);
+//            Item item = new Item(name, price, info);
+//            entityManager.persist(item);
             entityTransaction.commit();
 
         } catch (Exception e) {
