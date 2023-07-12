@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -9,12 +10,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.module_8.MainController">
    <children>
-      <Label alignment="CENTER_RIGHT" layoutY="6.0" prefHeight="60.0" prefWidth="235.0" style="-fx-background-color: #333;" text="0" textFill="#fcfcfc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label fx:id="label_res" alignment="CENTER_RIGHT" layoutY="6.0" prefHeight="60.0" prefWidth="235.0" style="-fx-background-color: #333;" text="0" textFill="#fcfcfc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
          <padding>
             <Insets left="10.0" right="10.0" />
@@ -35,97 +35,101 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="AC" textFill="WHITE">
+            <Button fx:id="clear_btn" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" stylesheets="@styles/style.css" text="AC" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btnActive" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="minus_plus_btn" layoutX="10.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="+/-" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="+/-" textFill="WHITE" GridPane.columnIndex="1">
+            <Button fx:id="percent_btn" layoutX="68.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="\%" textFill="WHITE" GridPane.columnIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="68.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="\%" textFill="WHITE" GridPane.columnIndex="2">
+            <Button fx:id="divide_btn" layoutX="127.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="/" textFill="WHITE" GridPane.columnIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="127.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+            <Button layoutX="186.0" layoutY="22.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="7" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="186.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button layoutX="68.0" layoutY="70.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="68.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="mult_btn" layoutX="127.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="X" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="127.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="X" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button layoutX="186.0" layoutY="70.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="4" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="186.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button layoutX="68.0" layoutY="118.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="68.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="minus_btn" layoutX="127.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="127.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button layoutX="186.0" layoutY="118.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="1" textFill="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="186.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="166.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button layoutX="68.0" layoutY="166.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="68.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="plus_btn" layoutX="127.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="127.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button layoutX="186.0" layoutY="166.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="186.0" layoutY="166.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <Button fx:id="comma_btn" layoutX="10.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="127.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="equal_btn" layoutX="127.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" styleClass="btnActive" stylesheets="@styles/style.css" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
