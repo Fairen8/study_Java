@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="235.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutY="6.0" prefHeight="60.0" prefWidth="235.0" style="-fx-background-color: #333;" text="0" textFill="#fcfcfc" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <GridPane layoutY="60.0" prefHeight="240.0" prefWidth="235.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="AC" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="+/-" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="68.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #3d3d3d; -fx-border-color: #333;" text="\%" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="127.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="/" textFill="WHITE" GridPane.columnIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="186.0" layoutY="22.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="68.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="127.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="X" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="186.0" layoutY="70.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="68.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="127.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="186.0" layoutY="118.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="68.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="127.0" layoutY="166.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="186.0" layoutY="166.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #585a5c; -fx-border-color: #333;" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="127.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 0; -fx-border-radius: 0; -fx-background-color: #ff9900; -fx-border-color: #333;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
