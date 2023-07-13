@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="350.0" style="-fx-background-color: #8f8f8f;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.module_8.MainController">
+   <children>
+      <Label alignment="CENTER" prefHeight="70.0" prefWidth="350.0" style="-fx-background-color: #474747; -fx-font-weight: bold; -fx-font-size: 40px;" text="Конвертер" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Rage Italic" size="45.0" />
+         </font>
+      </Label>
+      <TextField fx:id="num_input" layoutX="15.0" layoutY="91.0" onKeyReleased="#getText" prefHeight="35.0" prefWidth="320.0" style="-fx-border-color: #363636; -fx-border-radius: 10; -fx-border-width: 1px; -fx-background-color: #8f8f8f; -fx-text-fill: white;" styleClass="text">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <ChoiceBox fx:id="conversion_ChoiceBox" layoutX="14.0" layoutY="144.0" prefHeight="30.0" prefWidth="150.0" style="-fx-font-size: 16px;" />
+      <Label fx:id="tons_output" layoutX="14.0" layoutY="207.0" prefHeight="70.0" prefWidth="320.0" text="Тонны">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="kilograms_output" layoutX="14.0" layoutY="277.0" prefHeight="70.0" prefWidth="320.0" text="Килограммы">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="grams_output" layoutX="15.0" layoutY="347.0" prefHeight="70.0" prefWidth="320.0" text="Граммы">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Button contentDisplay="CENTER" layoutX="245.0" layoutY="142.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #ffe500; -fx-text-fill: black; -fx-font-size: 16px;" text="Clear">
+         <font>
+            <Font name="Harlow Solid Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
