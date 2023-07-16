@@ -64,27 +64,6 @@ public class DB {
         return res.getString("email");
     }
 
-    public boolean authUser(String login, String password) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT `id` FROM `users` WHERE `login` = ? AND `password` = ?";
-        PreparedStatement prSt = getDbConnection().prepareStatement(sql);
-        prSt.setString(1, login);
-        prSt.setString(2, password);
-
-        ResultSet res = prSt.executeQuery();
-        return res.next();
-    }
-
-    public void regUser(String login, String email, String password) throws SQLException, ClassNotFoundException {
-        String sql = "INSERT INTO `users` (`login`, `email`, `password`) VALUES (?, ?, ?)";
-
-        PreparedStatement prSt = getDbConnection().prepareStatement(sql);
-        prSt.setString(1, login);
-        prSt.setString(2, email);
-        prSt.setString(3, password);
-
-        prSt.executeUpdate();
-    }
-
     public void isConnected() throws SQLException, ClassNotFoundException {
         dbConn = getDbConnection();
         System.out.println(dbConn.isValid(1000));

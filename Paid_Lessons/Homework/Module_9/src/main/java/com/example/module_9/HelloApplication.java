@@ -11,9 +11,9 @@ import java.sql.SQLException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Авторизация");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("user_profile.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 550, 400);
+        stage.setTitle("Кабинет пользователя");
         stage.setScene(scene);
         stage.show();
     }

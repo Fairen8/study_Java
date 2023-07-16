@@ -1,10 +1,8 @@
-package com.example.module_9.controlles;
+package com.example.module_9;
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
-import com.example.module_9.DB;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
