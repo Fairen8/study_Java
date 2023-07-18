@@ -15,7 +15,7 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </Label>
-        <Button fx:id="exit_btn" focusTraversable="false" layoutX="477.0" layoutY="18.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Выйти" textAlignment="CENTER" textFill="WHITE">
+        <Button fx:id="exit_btn" focusTraversable="false" layoutX="498.0" layoutY="18.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Выйти" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
@@ -28,5 +28,13 @@
             <VBox fx:id="panelVBox" prefHeight="317.0" prefWidth="600.0" style="-fx-background-color: #343434;" />
          </content>
       </ScrollPane>
+      <Button fx:id="add_article_btn" focusTraversable="false" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Добавить статью" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
     </children>
 </AnchorPane>

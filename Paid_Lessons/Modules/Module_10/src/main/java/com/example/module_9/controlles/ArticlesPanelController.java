@@ -30,7 +30,7 @@ public class ArticlesPanelController {
     private URL location;
 
     @FXML
-    private Button exit_btn;
+    private Button exit_btn, add_article_btn;
 
     @FXML
     private VBox panelVBox;
@@ -64,6 +64,14 @@ public class ArticlesPanelController {
         exit_btn.setOnAction(event -> {
             try {
                 exitUser(event);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        add_article_btn.setOnAction(event -> {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            try {
+                HelloApplication.setScene("add_article.fxml" , stage);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
