@@ -11,6 +11,17 @@ public class DB {
 
     private Connection dbConn = null;
 
+    public ResultSet getAricles() {
+        String sql = "SELECT `title`, `intro` FROM `articles`;";
+        Statement statement = null;
+        try {
+            statement = getDbConnection().createStatement();
+            return statement.executeQuery(sql);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private Connection getDbConnection() throws ClassNotFoundException, SQLException {
         String connStr = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB_NAME;
         Class.forName("com.mysql.cj.jdbc.Driver");

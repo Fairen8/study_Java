@@ -3,15 +3,22 @@ package com.example.module_9.controlles;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
+import com.example.module_9.DB;
 import com.example.module_9.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class ArticlesPanelController {
@@ -26,7 +33,34 @@ public class ArticlesPanelController {
     private Button exit_btn;
 
     @FXML
-    void initialize() {
+    private VBox panelVBox;
+
+    @FXML
+    void initialize() throws SQLException, IOException {
+
+        DB db = new DB();
+        ResultSet resultSet = db.getAricles();
+        while (resultSet.next()) {
+            Node node = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("article.fxml")));
+
+            Label title = (Label) node.lookup("#title");
+            title.setText(resultSet.getString("title"));
+
+            Label intro = (Label) node.lookup("#intro");
+            intro.setText(resultSet.getString("intro"));
+
+            node.setOnMouseEntered(event -> {
+                node.setStyle("-fx-background-color: #707173");
+            });
+
+            node.setOnMouseExited(event -> {
+                node.setStyle("-fx-background-color: #343434");
+            });
+            
+            panelVBox.getChildren().add(node);
+            panelVBox.setSpacing(10);
+        }
+
         exit_btn.setOnAction(event -> {
             try {
                 exitUser(event);
