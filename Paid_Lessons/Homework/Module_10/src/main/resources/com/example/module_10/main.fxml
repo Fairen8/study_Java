@@ -22,23 +22,23 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="reg_login" focusTraversable="false" layoutX="48.0" layoutY="99.0" promptText="Введите логин" styleClass="text-input" stylesheets="@styles/main.css">
+      <TextField fx:id="reg_login" focusTraversable="false" layoutX="48.0" layoutY="99.0" promptText="Введите логин" styleClass="text-input" stylesheets="@../../../styles/main.css">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="reg_email" focusTraversable="false" layoutX="48.0" layoutY="154.0" promptText="Введите email" styleClass="text-input" stylesheets="@styles/main.css">
+      <TextField fx:id="reg_email" focusTraversable="false" layoutX="48.0" layoutY="154.0" promptText="Введите email" styleClass="text-input" stylesheets="@../../../styles/main.css">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="reg_pass" focusTraversable="false" layoutX="48.0" layoutY="213.0" promptText="Введите пароль" stylesheets="@styles/main.css">
+      <PasswordField fx:id="reg_pass" focusTraversable="false" layoutX="48.0" layoutY="213.0" promptText="Введите пароль" stylesheets="@../../../styles/main.css">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
       </PasswordField>
       <CheckBox fx:id="reg_rights" focusTraversable="false" layoutX="48.0" layoutY="269.0" mnemonicParsing="false" selected="true" textFill="WHITE" />
-      <Button fx:id="reg_btn" focusTraversable="false" layoutX="61.0" layoutY="318.0" mnemonicParsing="false" stylesheets="@styles/main.css" text="Зарегистрироваться" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="reg_btn" focusTraversable="false" layoutX="61.0" layoutY="318.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Зарегистрироваться" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
@@ -46,17 +46,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="auth_login" focusTraversable="false" layoutX="336.0" layoutY="99.0" promptText="Введите логин" styleClass="text-input" stylesheets="@styles/main.css">
+      <TextField fx:id="auth_login" focusTraversable="false" layoutX="336.0" layoutY="99.0" promptText="Введите логин" styleClass="text-input" stylesheets="@../../../styles/main.css">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="auth_pass" focusTraversable="false" layoutX="336.0" layoutY="158.0" promptText="Введите пароль" stylesheets="@styles/main.css">
+      <PasswordField fx:id="auth_pass" focusTraversable="false" layoutX="336.0" layoutY="158.0" promptText="Введите пароль" stylesheets="@../../../styles/main.css">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
       </PasswordField>
-      <Button fx:id="auth_btn" focusTraversable="false" layoutX="396.0" layoutY="214.0" mnemonicParsing="false" stylesheets="@styles/main.css" text="Войти" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="auth_btn" focusTraversable="false" layoutX="396.0" layoutY="214.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Войти" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>
@@ -64,6 +64,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Hyperlink focusTraversable="false" layoutX="64.0" layoutY="266.0" styleClass="link" stylesheets="@styles/main.css" text="Пользовательское соглашение" textFill="WHITE" underline="true" />
+      <Hyperlink focusTraversable="false" layoutX="64.0" layoutY="266.0" styleClass="link" stylesheets="@../../../styles/main.css" text="Пользовательское соглашение" textFill="WHITE" underline="true" />
    </children>
 </AnchorPane>

@@ -1,6 +1,5 @@
 package com.example.module_10.controlles;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -10,7 +9,6 @@ import java.util.ResourceBundle;
 
 import com.example.module_10.DB;
 import com.example.module_10.HelloApplication;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -28,7 +26,10 @@ public class ArticlesPanelController {
     private URL location;
 
     @FXML
-    private Button exit_btn, add_article_btn;
+    private Button add_article_btn;
+
+    @FXML
+    private Button user_profile_btn;
 
     @FXML
     private VBox panelVBox;
@@ -71,9 +72,10 @@ public class ArticlesPanelController {
             panelVBox.setSpacing(10);
         }
 
-        exit_btn.setOnAction(event -> {
+        user_profile_btn.setOnAction(event -> {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             try {
-                exitUser(event);
+                HelloApplication.setScene("user_profile.fxml" , stage);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -87,14 +89,5 @@ public class ArticlesPanelController {
             }
         });
     }
-
-    private void exitUser(ActionEvent event) throws IOException {
-        File file = new File("user.settings");
-        file.delete();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        HelloApplication.setScene("main.fxml", stage);
-    }
-
 }
 

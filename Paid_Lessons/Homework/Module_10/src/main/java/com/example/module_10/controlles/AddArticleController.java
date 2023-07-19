@@ -9,9 +9,11 @@ import com.example.module_10.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 
 public class AddArticleController {
 
@@ -20,6 +22,9 @@ public class AddArticleController {
 
     @FXML
     private URL location;
+
+    @FXML
+    private Button back_btn;
 
     @FXML
     private TextArea intro_field;
@@ -63,7 +68,14 @@ public class AddArticleController {
 
     @FXML
     void initialize() {
-
+        back_btn.setOnAction(event -> {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            try {
+                HelloApplication.setScene("articles-panel.fxml" , stage);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
 }

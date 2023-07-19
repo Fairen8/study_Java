@@ -15,12 +15,12 @@
                 <Font name="System Bold" size="25.0" />
             </font>
         </Label>
-        <TextField fx:id="title_field" focusTraversable="false" layoutX="100.0" layoutY="77.0" prefHeight="40.0" prefWidth="404.0" promptText="Введите название" styleClass="text-input" stylesheets="@styles/main.css">
+        <TextField fx:id="title_field" focusTraversable="false" layoutX="100.0" layoutY="77.0" prefHeight="40.0" prefWidth="404.0" promptText="Введите название" styleClass="text-input" stylesheets="@../../../styles/main.css">
             <font>
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
         </TextField>
-        <Button focusTraversable="false" layoutX="219.0" layoutY="334.0" mnemonicParsing="false" onAction="#addArticle" stylesheets="@styles/main.css" text="Добавить статью" textAlignment="CENTER" textFill="WHITE">
+        <Button focusTraversable="false" layoutX="219.0" layoutY="334.0" mnemonicParsing="false" onAction="#addArticle" stylesheets="@../../../styles/main.css" text="Добавить статью" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
@@ -28,15 +28,23 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-      <TextArea fx:id="intro_field" focusTraversable="false" layoutX="30.0" layoutY="141.0" prefHeight="182.0" prefWidth="189.0" promptText="Введите анонс" style="-fx-prompt-text-fill: #a1a1a1; -fx-text-fill: #fafafa; -fx-control-inner-background: #343434;" stylesheets="@../styles/textarea.css">
+      <TextArea fx:id="intro_field" focusTraversable="false" layoutX="30.0" layoutY="141.0" prefHeight="182.0" prefWidth="189.0" promptText="Введите анонс" style="-fx-prompt-text-fill: #a1a1a1; -fx-text-fill: #fafafa; -fx-control-inner-background: #343434;">
          <font>
             <Font name="Montserrat Regular" size="12.0" />
          </font>
       </TextArea>
-      <TextArea fx:id="text_field" focusTraversable="false" layoutX="383.0" layoutY="141.0" prefHeight="182.0" prefWidth="189.0" promptText="Введите осноной текст статьи" style="-fx-prompt-text-fill: #a1a1a1; -fx-text-fill: #fafafa; -fx-control-inner-background: #343434;" styleClass="text-input" stylesheets="@../styles/textarea.css">
+      <TextArea fx:id="text_field" focusTraversable="false" layoutX="383.0" layoutY="141.0" prefHeight="182.0" prefWidth="189.0" promptText="Введите осноной текст статьи" style="-fx-prompt-text-fill: #a1a1a1; -fx-text-fill: #fafafa; -fx-control-inner-background: #343434;" styleClass="text-input">
          <font>
             <Font name="Montserrat Regular" size="12.0" />
          </font>
       </TextArea>
+      <Button fx:id="back_btn" focusTraversable="false" layoutX="14.0" layoutY="29.0" mnemonicParsing="false" stylesheets="@../../../styles/main.css" text="Назад" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
     </children>
 </AnchorPane>

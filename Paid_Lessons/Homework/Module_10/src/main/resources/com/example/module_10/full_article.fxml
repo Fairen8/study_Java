@@ -17,7 +17,7 @@
                 <Font name="Montserrat Regular" size="16.0" />
             </font>
         </Label>
-      <Button fx:id="back_btn" focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" stylesheets="@styles/main.css" text="Назад" textFill="WHITE">
+      <Button fx:id="back_btn" focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" stylesheets="@../../../styles/main.css" text="Назад" textFill="WHITE">
          <font>
             <Font name="Montserrat Regular" size="14.0" />
          </font>

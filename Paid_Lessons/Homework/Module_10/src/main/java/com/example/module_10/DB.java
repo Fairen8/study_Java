@@ -39,6 +39,41 @@ public class DB {
         return dbConn;
     }
 
+    public void setUserParameters(int id, String login, String email, String password) throws SQLException, ClassNotFoundException {
+        String sql = "UPDATE `users` SET `login` = ?, `email` = ?, `password` = ? WHERE `id` = ?;";
+        PreparedStatement prSt = getDbConnection().prepareStatement(sql);
+        prSt.setString(1, login);
+        prSt.setString(2, email);
+        prSt.setString(3, password);
+        prSt.setInt(4, id);
+
+        prSt.executeUpdate();
+    }
+
+    public int getUserid(String login) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT `id` FROM `users` WHERE `login` = ?;";
+        PreparedStatement prSt = getDbConnection().prepareStatement(sql);
+
+        prSt.setString(1, login);
+
+        ResultSet res = prSt.executeQuery();
+
+        res.next();
+        return res.getInt("id");
+    }
+
+    public String getUserEmail(int id) throws SQLException, ClassNotFoundException {
+        String sql = "SELECT `email` FROM `users` WHERE `id` = ?;";
+        PreparedStatement prSt = getDbConnection().prepareStatement(sql);
+
+        prSt.setInt(1, id);
+
+        ResultSet res = prSt.executeQuery();
+
+        res.next();
+        return res.getString("email");
+    }
+
     public boolean authUser(String login, String password) throws SQLException, ClassNotFoundException {
         String sql = "SELECT `id` FROM `users` WHERE `login` = ? AND `password` = ?";
         PreparedStatement prSt = getDbConnection().prepareStatement(sql);
