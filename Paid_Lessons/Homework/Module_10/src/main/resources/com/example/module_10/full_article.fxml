@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343434;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.module_10.controlles.FullArticleController">
+    <children>
+        <Label fx:id="title" alignment="CENTER" layoutY="62.0" prefHeight="28.0" prefWidth="600.0" style="-fx-padding: 5 20;" text="Новая статья" textFill="WHITE">
+            <font>
+                <Font name="Montserrat Regular" size="25.0" />
+            </font>
+        </Label>
+        <Label fx:id="text" alignment="TOP_LEFT" layoutY="104.0" prefHeight="295.0" prefWidth="600.0" style="-fx-padding: 5 20;" text="Новая статья" textFill="WHITE">
+            <font>
+                <Font name="Montserrat Regular" size="16.0" />
+            </font>
+        </Label>
+      <Button fx:id="back_btn" focusTraversable="false" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="85.0" stylesheets="@styles/main.css" text="Назад" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
