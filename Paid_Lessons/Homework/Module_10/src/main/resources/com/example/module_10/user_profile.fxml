@@ -15,7 +15,7 @@
                 <Font name="Montserrat Bold" size="25.0" />
             </font>
         </Label>
-        <TextField fx:id="login" focusTraversable="false" layoutX="185.0" layoutY="107.0" prefHeight="40.0" prefWidth="230.0" promptText="Логин" styleClass="text-input" stylesheets="@../../../styles/main.css">
+        <TextField fx:id="login" focusTraversable="false" layoutX="186.0" layoutY="101.0" prefHeight="40.0" prefWidth="230.0" promptText="Логин" styleClass="text-input" stylesheets="@../../../styles/main.css">
             <font>
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
@@ -25,7 +25,7 @@
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
         </TextField>
-        <PasswordField fx:id="pass" focusTraversable="false" layoutX="185.0" layoutY="213.0" prefHeight="40.0" prefWidth="230.0" promptText="Пароль" stylesheets="@../../../styles/main.css">
+        <PasswordField fx:id="pass" focusTraversable="false" layoutX="185.0" layoutY="223.0" prefHeight="40.0" prefWidth="230.0" promptText="Пароль" stylesheets="@../../../styles/main.css">
             <font>
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
@@ -38,17 +38,17 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Label fx:id="error_login" alignment="TOP_LEFT" layoutX="162.0" layoutY="140.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
+        <Label fx:id="error_login" alignment="TOP_LEFT" layoutX="186.0" layoutY="141.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
             <font>
                 <Font name="Montserrat Bold" size="10.0" />
             </font>
         </Label>
-        <Label fx:id="error_pass" alignment="TOP_LEFT" layoutX="162.0" layoutY="263.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
+        <Label fx:id="error_pass" alignment="TOP_LEFT" layoutX="186.0" layoutY="263.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
             <font>
                 <Font name="Montserrat Bold Italic" size="10.0" />
             </font>
         </Label>
-        <Label fx:id="error_email" alignment="TOP_LEFT" layoutX="161.0" layoutY="200.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
+        <Label fx:id="error_email" alignment="TOP_LEFT" layoutX="186.0" layoutY="200.0" prefHeight="10.0" prefWidth="229.0" textFill="RED">
             <font>
                 <Font name="Montserrat Bold Italic" size="10.0" />
             </font>
