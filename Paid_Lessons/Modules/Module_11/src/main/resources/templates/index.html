@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
 </head>
 <body>
-    <h1>Главная страница</h1>
+    <div th:replace="~{layouts/header :: header}"></div>
+
+    <div class="presentation">
+        <img src="https://itproger.com/img/reg_page/man-seating.svg">
+        <h2>Хочешь выглядить стильно?</h2>
+        <p>Здесь вы найдёте крутые и стильные вещи для себя</p>
+    </div>
+    <main class="container">
+
+    </main>
+
+    <div th:replace="~{layouts/footer :: footer}"></div>
 </body>
 </html>
