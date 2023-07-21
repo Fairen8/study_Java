@@ -49,6 +49,8 @@ header nav a {
 }
 
 footer {
+    float: left;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 100px;
     text-align: center;
@@ -89,4 +91,38 @@ div.block {
     width: 300px;
     position: relative;
     top: 51px;
+}
+
+.items {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.items > div {
+    width: 30%;
+    margin-bottom: 30px;
+    background: #333;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.items > div h3{
+    color: #fff;
+    margin: 7px 0;
+    font-size: 23px;
+}
+
+.items > div p{
+    color: #a7a7a7;
+}
+
+.items > div span {
+    background: #fdbf01;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    font-weight: 600;
+    color: #6a5412;
 }

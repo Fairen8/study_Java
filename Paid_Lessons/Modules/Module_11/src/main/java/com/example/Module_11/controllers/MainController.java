@@ -1,5 +1,8 @@
 package com.example.Module_11.controllers;
 
+import com.example.Module_11.models.Item;
+import com.example.Module_11.repo.ItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-    @GetMapping
-    public String index() {
+    @Autowired
+    private ItemRepository itemRepository;
+
+    @GetMapping("/")
+    public String index(Model model) {
+        model.addAttribute("items", itemRepository.findAll());
         return "index";
     }
 
