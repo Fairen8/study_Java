@@ -4,7 +4,7 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/manager/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/manager/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/manager" relative="/" />
@@ -14,7 +14,7 @@
     <facet type="web" name="Web3">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/host-manager/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/host-manager/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/host-manager" relative="/" />
@@ -24,7 +24,7 @@
     <facet type="web" name="Web2">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs/appdev/sample/web/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs/appdev/sample/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs/appdev/sample/web" relative="/" />
@@ -34,7 +34,7 @@
     <facet type="web" name="Web5">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/target/tomcat-1.0-SNAPSHOT/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/target/tomcat-1.0-SNAPSHOT/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/target/tomcat-1.0-SNAPSHOT" relative="/" />
@@ -44,7 +44,7 @@
     <facet type="web" name="Web4">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/docs" relative="/" />
@@ -54,7 +54,7 @@
     <facet type="web" name="Web7">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/examples/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/examples/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/examples" relative="/" />
@@ -64,7 +64,7 @@
     <facet type="web" name="Web6">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/ROOT/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/ROOT/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/webapps/ROOT" relative="/" />
@@ -74,7 +74,7 @@
     <facet type="web" name="Web9">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/conf/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/apache-tomcat-8.5.65/conf/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/apache-tomcat-8.5.65/conf" relative="/WEB-INF" />
@@ -84,7 +84,7 @@
     <facet type="web" name="Web8">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/src/main/webapp/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Lessons_2/Modules/Module_7/les6/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Paid_Lessons/Modules/Module_7/les6/src/main/webapp" relative="/" />
