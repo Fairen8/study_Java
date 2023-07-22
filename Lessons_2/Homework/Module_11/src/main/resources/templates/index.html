@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя страница</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="~{layouts/header :: header}"></div>
+
+<main>
+    <div class="maintext">
+        <ul>
+            <li class="item" ><h1 style="font-size: 70px">Простой и удобный сервис</h1>
+            <h2 style="font-size: 40px">Делаем работу быстро и качественно</h2></li>
+            <li class="item"><a href="/uslugi" class="button">Посмотреть услуги</a></li>
+        </ul>
+    </div>
+</main>
+
+<div th:replace="~{layouts/footer :: footer}"></div>
+</body>
+</html>
