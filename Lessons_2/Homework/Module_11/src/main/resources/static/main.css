@@ -25,12 +25,21 @@ body {
     font-weight: 300;
 }
 
-.maintext {
+main {
     padding: 200px 0;
     float: left;
     width: 100%;
     margin-top: 50px;
     text-align: center;
+}
+
+.con {
+    display: inline-flex;
+}
+
+li {
+    margin: 15px;
+    list-style-type: none;
 }
 
 .item {
