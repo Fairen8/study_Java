@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${item.title}" />
+  <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="~{layouts/header :: header}"></div>
+
+<main class="container">
+  <div class="items">
+    <div>
+      <img th:src="${item.image}" th:alt="${item.title}">
+      <h3 th:text="${item.title}" />
+      <p th:text="${item.info}" />
+      <span th:text="${item.price} + '$'" />
+    </div>
+  </div>
+
+  <a th:href="'/item/' + ${item.id} + '/update'" class="edit-btn">Редактировать</a>
+  <form method="post" th:action="'/item/' + ${item.id} + '/delete'">
+    <button type="submit">Удалить</button>
+  </form>
+</main>
+
+<div th:replace="~{layouts/footer :: footer}"></div>
+</body>
+</html>
