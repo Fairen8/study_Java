@@ -35,7 +35,7 @@ public class ItemController {
     }
 
     @PostMapping("/item/{id}/update")
-    public String updateItem(@PathVariable(value = "id") long id, @RequestParam String title,@RequestParam String image, @RequestParam String price, @RequestParam String info) {
+    public String updateItem(@PathVariable(value = "id") long id, @RequestParam String title, @RequestParam String image, @RequestParam String price, @RequestParam String info) {
         Item item = itemRepository.findById(id).orElse(new Item());
         item.setTitle(title);
         item.setImage(image);
