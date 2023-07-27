@@ -20,11 +20,23 @@ public class ItemController {
         return "add-item";
     }
 
+    @PostMapping("/item/add")
+    public String store(
+            @AuthenticationPrincipal User user,
+            @RequestParam String title,
+            @RequestParam String image,
+            @RequestParam String price,
+            @RequestParam String info
+    ) {
+        Item item = new Item(title, info, image, Short.parseShort(price), user);
+        itemRepository.save(item);
+        return "redirect:/";
+    }
+
     @GetMapping("/item/{id}")
     public String showItem(@PathVariable(value = "id") long id, Model model) {
         Item item = itemRepository.findById(id).orElse(new Item());
         model.addAttribute("item", item);
-
         return "show-item";
     }
 
@@ -32,28 +44,24 @@ public class ItemController {
     public String update(@PathVariable(value = "id") long id, Model model) {
         Item item = itemRepository.findById(id).orElse(new Item());
         model.addAttribute("item", item);
-
         return "item-update";
     }
 
     @PostMapping("/item/{id}/update")
-    public String updateItem(@PathVariable(value = "id") long id, @RequestParam String title, @RequestParam String image, @RequestParam String price, @RequestParam String info) {
+    public String updateItem(
+            @PathVariable(value = "id") long id,
+            @RequestParam String title,
+            @RequestParam String image,
+            @RequestParam String price,
+            @RequestParam String info
+    ) {
         Item item = itemRepository.findById(id).orElse(new Item());
         item.setTitle(title);
         item.setImage(image);
         item.setInfo(info);
         item.setPrice(Short.parseShort(price));
-
         itemRepository.save(item);
         return "redirect:/item/" + id;
-    }
-
-    @PostMapping("/item/add")
-    public String store(@AuthenticationPrincipal User user, @RequestParam String title, @RequestParam String image, @RequestParam String price, @RequestParam String info) {
-        Item item = new Item(title, info, image, Short.parseShort(price), user);
-
-        itemRepository.save(item);
-        return "redirect:/";
     }
 
     @PostMapping("/item/{id}/delete")

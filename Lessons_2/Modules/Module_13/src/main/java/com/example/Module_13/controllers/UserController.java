@@ -32,11 +32,11 @@ public class UserController {
         return "user";
     }
 
-
     @GetMapping("/reg")
     public String reg(@RequestParam(name = "error", defaultValue = "", required = false) String error, Model model) {
-        if (error.equals("username"))
+        if(error.equals("username")) {
             model.addAttribute("error", "Такой логин пользователя уже занят");
+        }
         return "reg";
     }
 
@@ -44,12 +44,12 @@ public class UserController {
     public String addUser(@RequestParam String username,
                           @RequestParam String email,
                           @RequestParam String password) {
-
-        if (userRepository.findByUsername(username) != null)
+        if(userRepository.findByUsername(username) != null) {
             return "redirect:/reg?error=username";
+        }
 
-        User user = new User(username, passwordEncoder.encode(password), email, true, Collections.singleton(Role.USER));
-
+        password = passwordEncoder.encode(password);
+        User user = new User(username, password, email, true, Collections.singleton(Role.ADMIN));
         userRepository.save(user);
         return "redirect:/login";
     }

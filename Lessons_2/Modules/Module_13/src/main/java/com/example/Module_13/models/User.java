@@ -17,25 +17,22 @@ public class User implements UserDetails {
 
     private String username, password, email;
 
-    private boolean enable;
+    private boolean enabled;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
-    public User() {}
+    public User() {
+    }
 
-    public User(String username, String password, String email, boolean enable, Set<Role> roles) {
+    public User(String username, String password, String email, boolean enabled, Set<Role> roles) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.enable = enable;
+        this.enabled = enabled;
         this.roles = roles;
-    }
-
-    public long getId() {
-        return id;
     }
 
     public String getUsername() {
@@ -54,11 +51,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
         return true;
     }
 
@@ -87,12 +79,12 @@ public class User implements UserDetails {
         this.email = email;
     }
 
-    public boolean isEnable() {
-        return enable;
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 
     public Set<Role> getRoles() {

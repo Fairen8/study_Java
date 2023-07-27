@@ -1,6 +1,7 @@
 package com.example.Module_13.controllers;
 
 
+import com.example.Module_13.models.Item;
 import com.example.Module_13.repo.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,8 @@ public class MainController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("items", itemRepository.findAll());
+        Iterable<Item> items = itemRepository.findAll();
+        model.addAttribute("items", items);
         return "index";
     }
 
