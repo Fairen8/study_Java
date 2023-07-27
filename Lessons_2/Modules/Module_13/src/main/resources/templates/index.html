@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+    <div th:replace="~{layouts/header :: header}"></div>
+
+    <div class="presentation">
+        <img src="https://itproger.com/img/reg_page/man-seating.svg">
+        <h2>Хочешь выглядить стильно?</h2>
+        <p>Здесь вы найдёте крутые и стильные вещи для себя</p>
+    </div>
+    <main class="container">
+        <div class="items" th:if="${!items.isEmpty()}">
+            <div th:each="el : ${items}">
+                <a th:href="'/item/' + ${el.id}"><img class="itemim" th:src="${el.image}" th:alt="${el.title}"></a>
+                <h3 th:text="${el.title}" />
+                <p th:text="${el.info}" />
+                <span th:text="${el.price} + '$'" />
+            </div>
+        </div>
+        <div th:if="${items.isEmpty()}" class="block">
+            <p>Нет товаров</p>
+        </div>
+    </main>
+
+    <div th:replace="~{layouts/footer :: footer}"></div>
+</body>
+</html>
