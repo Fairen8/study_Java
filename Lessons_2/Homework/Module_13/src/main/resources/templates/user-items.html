@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${user.getUsername()}" />
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="~{layouts/header :: header}"></div>
+
+<div class="block" sec:authorize="!hasAuthority('ADMIN')">
+    <h1>Доступ запрещен</h1>
+    <p>Эта страница доступна только администраторам</p>
+</div>
+
+<main class="container" sec:authorize="hasAuthority('ADMIN')">
+    <div class="items" th:if="${!user.getItems().isEmpty()}">
+        <div th:each="el : ${user.getItems()}">
+            <a th:href="'/item/' + ${el.id}"><img class="itemim" th:src="${el.image}" th:alt="${el.title}"></a>
+            <h3 th:text="${el.title}" />
+            <p th:text="${el.info}" />
+            <span th:text="${el.price} + '$'" />
+        </div>
+    </div>
+    <div th:if="${user.getItems().isEmpty()}" class="block">
+        <p>Нет товаров</p>
+    </div>
+</main>
+
+<div th:replace="~{layouts/footer :: footer}"></div>
+</body>
+</html>
