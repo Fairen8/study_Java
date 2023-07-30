@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Module_14</string>
-    <string name="myText">Hello</string>
+    <string name="app_logo">Умный конвертер</string>
+    <string name="hint_textfilt">Вводите число здесь</string>
+    <string name="button_text">Конвертировать</string>
 </resources>
