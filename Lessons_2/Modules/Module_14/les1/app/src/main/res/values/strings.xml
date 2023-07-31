@@ -3,4 +3,5 @@
     <string name="app_logo">Умный конвертер</string>
     <string name="hint_textfilt">Вводите число здесь</string>
     <string name="button_text">Конвертировать</string>
+    <string name="second_activity_text">Вторая активити</string>
 </resources>

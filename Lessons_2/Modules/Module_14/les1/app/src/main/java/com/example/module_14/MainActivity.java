@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button conver_btn;
-    EditText user_textfielt;
-    TextView result_textview;
+    private EditText user_textfielt;
+    private TextView result_textview;
+    private ImageButton btn_next_activity;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         conver_btn = findViewById(R.id.conver_btn);
         user_textfielt = findViewById(R.id.user_textfielt);
         result_textview = findViewById(R.id.result_textview);
+        btn_next_activity = findViewById(R.id.btn_next_activity);
 
         conver_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alertDialog = builder.create();
                 alertDialog.setTitle("Конвертация данных");
                 alertDialog.show();
+            }
+        });
+
+        btn_next_activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.exemle.app.SecondActivity");
+                startActivity(intent);
             }
         });
     }
