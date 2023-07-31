@@ -1,11 +1,8 @@
 package com.example.module_14;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,30 +28,13 @@ public class MainActivity extends AppCompatActivity {
         conver_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Вы хотите произвести конвертацию");
-                builder.setCancelable(false);
-                builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        ConvertSpeed();
-                    }
-                });
-                builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getApplicationContext(), "Вы отменили действие", Toast.LENGTH_LONG).show();
-                    }
-                });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.setTitle("Конвертация данных");
-                alertDialog.show();
+                ConvertSpeed(view);
             }
         });
     }
 
     @SuppressLint("SetTextI18n")
-    public void ConvertSpeed() {
+    public void ConvertSpeed(View v) {
         EditText user_textfielt = findViewById(R.id.user_textfielt);
         TextView result_textview = findViewById(R.id.result_textview);
 
@@ -63,12 +43,7 @@ public class MainActivity extends AppCompatActivity {
             float numer = Float.parseFloat(text);
             numer *= 1.6;
             result_textview.setText(Float.toString(numer));
-
-            conver_btn.setText("Готово");
-            conver_btn.setBackgroundColor(Color.GREEN);
-
         } else {
-            conver_btn.setText("Ошибка");
             Toast.makeText(getApplicationContext(), "Введите какой либо текст", Toast.LENGTH_SHORT).show();
         }
     }
