@@ -2,4 +2,7 @@
     <string name="app_name">Task Manager</string>
     <string name="delete_btn">Удалить</string>
     <string name="menu_title">Добавить новое задание</string>
+    <string name="list_name_fielt">Название списка</string>
+    <string name="info_app">Приложение для хранения заданий</string>
+
 </resources>
