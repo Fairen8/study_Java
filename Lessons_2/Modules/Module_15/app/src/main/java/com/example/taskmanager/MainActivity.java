@@ -1,6 +1,5 @@
 package com.example.taskmanager;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +12,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
@@ -92,29 +90,23 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.add_new_task) {
-            final EditText userTaskFild = new EditText(this);
-            AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("Добавление нового задания")
-                    .setMessage("Чтобы вы хотели добавить?")
-                    .setView(userTaskFild)
-                    .setPositiveButton("Добавить", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            String task = String.valueOf(userTaskFild.getText());
-                            dataBase.insertData(task);
-                            loadAllTask();
-                        }
-                    })
-                    .setNegativeButton("Отмена", null)
-                    .create();
-            dialog.show();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void onOptionsItemSelected(View view) {
+        final EditText userTaskFild = new EditText(this);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Добавление нового задания")
+                .setMessage("Чтобы вы хотели добавить?")
+                .setView(userTaskFild)
+                .setPositiveButton("Добавить", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String task = String.valueOf(userTaskFild.getText());
+                        dataBase.insertData(task);
+                        loadAllTask();
+                    }
+                })
+                .setNegativeButton("Отмена", null)
+                .create();
+        dialog.show();
     }
 
     public void deleteTask(View button) {
