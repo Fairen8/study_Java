@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/grams"
+        android:layout_width="299dp"
+        android:layout_height="86dp"
+        android:layout_below="@+id/killograms"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="491dp"
+        android:layout_marginBottom="83dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/grams"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/num_input"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/input"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="#8AFFFFFF"
+        tools:ignore="Autofill" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="55dp"
+        android:backgroundTint="#FFFFFF"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tones"
+        android:layout_width="299dp"
+        android:layout_height="86dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="319dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/tones"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/killograms"
+        android:layout_width="299dp"
+        android:layout_height="86dp"
+        android:layout_below="@+id/tones"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="405dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/killograms"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

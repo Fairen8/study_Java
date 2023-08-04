@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Конвертер</string>
+    <string name="input">Введите число</string>
+    <string name="tones">Количество тон:</string>
+    <string name="killograms">Количество кг:</string>
+    <string name="grams">Количество грамм:</string>
+</resources>
