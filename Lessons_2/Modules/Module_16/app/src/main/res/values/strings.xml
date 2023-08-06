@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ordy</string>
+    <string name="slogan">Кушайте постоянно: дома, на работе, в офисе и метро! Наше приложение поможет вам заказывать еду куда-угодно</string>
+    <string name="register">регистрация</string>
+    <string name="auth">Авторизация</string>
+    <string name="authUser">Войти в кабинет</string>
+    <string name="hintPhone">Номер телефона</string>
+    <string name="hintPassword">Пароль</string>
+    <string name="hintName">Введите имя</string>
+</resources>

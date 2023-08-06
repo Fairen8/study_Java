@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "359973355042",
+    "project_id": "ordy-2d2c8",
+    "storage_bucket": "ordy-2d2c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359973355042:android:1500970a11dd3fc767d47b",
+        "android_client_info": {
+          "package_name": "com.example.ordy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359973355042-eu1r5dji7erot79oj7h012lu9domvlu8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ordy",
+            "certificate_hash": "1eb10db06ef8f94f72198eb7dade17a278b31482"
+          }
+        },
+        {
+          "client_id": "359973355042-0dtkamdrsfvbmk1fb3na32dk298v104c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI7NK7LGkDscihJCiK802Yf4HQQMpy3NU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359973355042-0dtkamdrsfvbmk1fb3na32dk298v104c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
