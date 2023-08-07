@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Ordy"
         tools:targetApi="31">
         <activity
+            android:name=".FoodPage"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity

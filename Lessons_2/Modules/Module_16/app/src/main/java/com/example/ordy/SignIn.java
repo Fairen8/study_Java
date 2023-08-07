@@ -3,6 +3,7 @@ package com.example.ordy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +43,8 @@ public class SignIn extends AppCompatActivity {
                         if (snapshot.child(editPhone.getText().toString()).exists()) {
                             User user = snapshot.child(editPhone.getText().toString()).getValue(User.class);
                             if (user.getPassword().equals(editPassword.getText().toString())) {
-                                Toast.makeText(SignIn.this, "Успешно авторизован", Toast.LENGTH_LONG).show();
+                                 Intent intent = new Intent(SignIn.this, FoodPage.class);
+                                startActivity(intent);
                             } else
                                 Toast.makeText(SignIn.this, "Неверный логин или пароль", Toast.LENGTH_LONG).show();
                         } else
