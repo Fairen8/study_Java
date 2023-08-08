@@ -16,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String activeUser = SignIn.getDefaults("phone", MainActivity.this);
+
+        if (!activeUser.equals("")) {
+            Intent intent = new Intent(MainActivity.this, FoodPage.class);
+            startActivity(intent);
+        }
+
         btnSignIn = findViewById(R.id.btnSignIn);
         btnSignUp = findViewById(R.id.btnSignUp);
 
