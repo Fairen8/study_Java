@@ -1,0 +1,36 @@
+.text-input {
+    -fx-text-fill: #fafafa;
+    -fx-background-color: #343434;
+    -fx-border-color: #fafafa;
+    -fx-border-radius: 10;
+    -fx-padding: 10 20;
+}
+
+.text-input:focused {
+    -fx-border-color: #09acdc;
+}
+
+.link {
+    -fx-text-fill: #e06249;
+    -fx-underline: true;
+}
+
+.link:hover {
+    -fx-text-fill: #e1826f;
+}
+
+.button:hover {
+    -fx-background-color:  white;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-background-color:  #343434;
+    -fx-border-radius: 10;
+    -fx-padding: 10 20;
+    -fx-border-color: white;
+}
+
+.message_label {
+    -fx-padding: 10px;
+}
