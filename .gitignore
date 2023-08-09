@@ -100,3 +100,7 @@
 /Lessons_2/Graduate_work/JavaFx/JavaFX/.idea/.gitignore
 /Lessons_2/Graduate_work/JavaFx/JavaFX/.idea/misc.xml
 /Lessons_2/Graduate_work/JavaFx/JavaFX/.idea/vcs.xml
+/Lessons_2/Graduate_work/JavaFX/.mvn/
+/Lessons_2/Graduate_work/JavaFX/target/
+/Lessons_2/Graduate_work/JavaFX/mvnw.cmd
+/Lessons_2/Graduate_work/JavaFX/mvnw
