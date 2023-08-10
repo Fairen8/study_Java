@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div th:replace="~{layouts/header :: header}"></div>
+
+<main>
+    <div class="center">
+    <h1>Все ссылки</h1>
+    <div th:if="${!links.isEmpty()}">
+        <ul th:each="el : ${links}">
+            <li style="margin: 5px">
+                <p>Ссылка: <a th:href="${el.getFull()}" th:text="'/' + ${el.getAbbreviated()}"/></p>
+            </li>
+        </ul>
+    </div>
+    <div th:if="${links.isEmpty()}">
+        <p>Нет ссылок</p>
+    </div>
+    <h1 style="margin-top: 10px">Добавление ссылки</h1>
+    <form method="post" th:action="@{/link/add}">
+        <input type="text" name="full" placeholder="Длинная ссылка" th:value="${full_link}"><br>
+        <input type="text" name="abbreviated" placeholder="Сокращенная ссылка" th:value="${abbreviated_link}">
+        <div th:text="${error}" class="error"/>
+        <button type="submit">Добавить</button>
+    </form>
+    </div>
+</main>
+
+<div th:replace="~{layouts/footer :: footer}"></div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #0046fa;
+    transition: color 500ms ease;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1fb2ff;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #2e3339;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px 15px;
+    transition: color 500ms ease;
+}
+
+header nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 500ms ease;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+footer {
+    flex-shrink: 0;
+    background: #2e3339;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.center {
+    margin-left: 200px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+form input {
+    width: 700px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin-top: 10px;
+    resize: none;
+}
+
+button {
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 90px;
+    height: 40px;
+    background: #15a201;
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+header .logo:hover {
+    background: linear-gradient(
+            to right,
+            #ffffff 20%,
+            #17c9ff 30%,
+            #3f73fd 70%,
+            #9364ff 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
