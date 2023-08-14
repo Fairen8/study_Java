@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Сокращение ссылок</string>
+    <string name="full_link">Длинная ссылка</string>
+    <string name="abbreviated_link">Сокращенная ссылка</string>
+    <string name="ready">Готово</string>
+    <string name="add">Добавить</string>
+    <string name="reduction">Сокращение:</string>
+</resources>

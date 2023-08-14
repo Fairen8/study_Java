@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="243dp"
+        android:layout_height="83dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/full_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="@string/full_link"
+        android:inputType="text"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        tools:ignore="Autofill,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/abbreviated_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:hint="@string/abbreviated_link"
+        android:inputType="text"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        tools:ignore="Autofill,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/main_btn"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="301dp"
+        android:background="@color/red"
+        android:divider="@color/background"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        tools:ignore="SpUsage,TextSizeCheck" />
+
+    <ListView
+        android:id="@+id/link_list"
+        android:layout_width="350dp"
+        android:layout_height="322dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginBottom="40dp"
+        tools:ignore="VisualLintBounds" />
+</RelativeLayout>

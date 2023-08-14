@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class FoodPage extends AppCompatActivity {
 
-
     private ListView listView;
 
     @Override
