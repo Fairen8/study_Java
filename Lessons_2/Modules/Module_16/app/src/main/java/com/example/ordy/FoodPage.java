@@ -45,7 +45,7 @@ public class FoodPage extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(FoodPage.this, "Нет интернет соединения", Toast.LENGTH_LONG).show();
             }
         });

@@ -2,12 +2,14 @@ package com.example.ordy;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,12 +23,14 @@ public class FoodListAdapter extends ArrayAdapter<Category> {
     private LayoutInflater layoutInflater;
     private List<Category> categories;
     private int layoutListRow;
+    private Context context;
 
     public FoodListAdapter(@NonNull Context context, int resource, @NonNull List<Category> objects) {
         super(context, resource, objects);
 
         categories = objects;
         layoutListRow = resource;
+        this.context = context;
 
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -48,6 +52,15 @@ public class FoodListAdapter extends ArrayAdapter<Category> {
             if (photo != null) {
                 int id = getContext().getResources().getIdentifier("drawable/" + category.getImage(), null, getContext().getPackageName());
                 photo.setImageResource(id);
+
+                photo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FoodDetail.ID = position + 1;
+                        context.startActivity(new Intent(context, FoodDetail.class));
+                    }
+                });
+
             }
         }
 

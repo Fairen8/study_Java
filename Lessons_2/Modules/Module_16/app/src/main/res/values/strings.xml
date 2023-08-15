@@ -7,4 +7,5 @@
     <string name="hintPhone">Номер телефона</string>
     <string name="hintPassword">Пароль</string>
     <string name="hintName">Введите имя</string>
+    <string name="addtoCart">Добавить в корзину</string>
 </resources>
