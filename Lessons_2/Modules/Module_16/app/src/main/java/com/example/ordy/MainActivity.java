@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         String activeUser = SignIn.getDefaults("phone", MainActivity.this);
 
-        if (!activeUser.equals("")) {
+        if(!activeUser.equals("")) {
             Intent intent = new Intent(MainActivity.this, FoodPage.class);
             startActivity(intent);
         }
