@@ -16,12 +16,16 @@ public class JSONHelper {
 
     private static final String FILE_NAME = "shopping_cart.json";
 
-    public static boolean exportToJSON(Context context, List<Cart> dataList) {
+    public static String createJSONString(List<Cart> dataList) {
         Gson gson = new Gson();
         DataItems dataItems = new DataItems();
 
         dataItems.setCartList(dataList);
-        String jsonString = gson.toJson(dataItems);
+        return gson.toJson(dataItems);
+    }
+
+    public static boolean exportToJSON(Context context, List<Cart> dataList) {
+        String jsonString = createJSONString(dataList);
 
         FileOutputStream fileOutputStream = null;
         try {

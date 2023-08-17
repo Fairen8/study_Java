@@ -18,13 +18,27 @@
         android:textSize="35dp"
         android:textStyle="bold" />
 
-
     <ListView
         android:id="@+id/shopping_cart"
         android:layout_width="wrap_content"
-        android:layout_height="571dp"
+        android:layout_height="400dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="15dp" />
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="165dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMakeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:background="@color/btnSignIn"
+        android:padding="10dp"
+        android:text="@string/btnMakeOrder"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+
 
 </RelativeLayout>
