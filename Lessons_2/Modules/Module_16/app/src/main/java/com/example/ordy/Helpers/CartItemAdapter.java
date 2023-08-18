@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,9 +53,9 @@ public class CartItemAdapter extends ArrayAdapter<Cart> {
                 amount.setText(String.valueOf(cart.getAmount()));
             if (productName != null) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                final DatabaseReference tabel = database.getReference("Category");
+                final DatabaseReference table = database.getReference("Category");
 
-                tabel.child(String.valueOf(cart.getCategoryID())).addValueEventListener(new ValueEventListener() {
+                table.child(String.valueOf(cart.getCategoryID())).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         Category category = snapshot.getValue(Category.class);

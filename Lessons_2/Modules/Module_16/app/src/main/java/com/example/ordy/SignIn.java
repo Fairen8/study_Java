@@ -46,6 +46,15 @@ public class SignIn extends AppCompatActivity {
                 table.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (editPhone.getText().toString().equals("") && editPassword.getText().toString().equals("")) {
+                            String activeUser = SignIn.getDefaults("phone", SignIn.this);
+
+                            if(!activeUser.equals("")) {
+                                Intent intent = new Intent(SignIn.this, FoodPage.class);
+                                startActivity(intent);
+                            }
+                        }
+
                         if(snapshot.child(editPhone.getText().toString()).exists()) {
                             User user = snapshot.child(editPhone.getText().toString()).getValue(User.class);
                             if(user.getPassword().equals(editPassword.getText().toString())) {

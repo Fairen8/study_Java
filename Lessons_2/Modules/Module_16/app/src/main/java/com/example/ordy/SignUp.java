@@ -35,19 +35,19 @@ public class SignUp extends AppCompatActivity {
         editName = findViewById(R.id.editTextName);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tabel = database.getReference("User");
+        final DatabaseReference table = database.getReference("User");
 
         btnSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tabel.addValueEventListener(new ValueEventListener() {
+                table.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.child(editPhone.getText().toString()).exists())
                             Toast.makeText(SignUp.this, "Такой пользователь уже есть", Toast.LENGTH_LONG).show();
                         else {
                             User user = new User(editName.getText().toString(), editPassword.getText().toString());
-                            tabel.child(editPhone.getText().toString()).setValue(user);
+                            table.child(editPhone.getText().toString()).setValue(user);
                             Toast.makeText(SignUp.this, "Успешная регистрация", Toast.LENGTH_LONG).show();
 
                         }

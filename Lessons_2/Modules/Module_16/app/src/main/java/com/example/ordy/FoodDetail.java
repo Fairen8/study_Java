@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -55,9 +56,9 @@ public class FoodDetail extends AppCompatActivity {
         });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tabel = database.getReference("Category");
+        final DatabaseReference table = database.getReference("Category");
 
-        tabel.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
+        table.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Category category = snapshot.getValue(Category.class);
@@ -73,8 +74,8 @@ public class FoodDetail extends AppCompatActivity {
             }
         });
 
-        final DatabaseReference tabel_food = database.getReference("Food");
-        tabel_food.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
+        final DatabaseReference table_food = database.getReference("Food");
+        table_food.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -113,9 +114,20 @@ public class FoodDetail extends AppCompatActivity {
         if (result) {
             Toast.makeText(this, "Добавленно", Toast.LENGTH_SHORT).show();
             Button btnCart = (Button) view;
-            btnCart.setText("Добавлеенно");
+            btnCart.setText("Добавленно");
         } else {
             Toast.makeText(this, "Не добавленно", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public static void delete(Context context, String name_Category) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference table_Category = database.getReference("Category");
+        final DatabaseReference table_Food = database.getReference("Food");
+
+        table_Category.child(String.valueOf(ID)).removeValue();
+        table_Food.child(String.valueOf(ID)).removeValue();
+
+        Toast.makeText(context, "Элемент " + name_Category + " успешно удалён!", Toast.LENGTH_SHORT).show();
     }
 }

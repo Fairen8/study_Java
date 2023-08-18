@@ -3,11 +3,9 @@ package com.example.ordy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -52,12 +50,12 @@ public class CartActivity extends AppCompatActivity {
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tabel = database.getReference("Order");
+        final DatabaseReference table = database.getReference("Order");
 
         btnMakeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tabel.addValueEventListener(new ValueEventListener() {
+                table.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         List<Cart> cartList = JSONHelper.importFromJSON(CartActivity.this);
@@ -71,7 +69,7 @@ public class CartActivity extends AppCompatActivity {
 
                         Long tsLong = System.currentTimeMillis() / 1000;
 
-                        tabel.child(tsLong.toString()).setValue(order).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        table.child(tsLong.toString()).setValue(order).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 List<Cart> cartList = new ArrayList<>();

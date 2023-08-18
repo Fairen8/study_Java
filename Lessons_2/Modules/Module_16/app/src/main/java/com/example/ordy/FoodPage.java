@@ -32,18 +32,20 @@ public class FoodPage extends AppCompatActivity {
         listView = findViewById(R.id.list_of_food);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference tabel = database.getReference("Category");
+        final DatabaseReference table = database.getReference("Category");
 
-        tabel.addValueEventListener(new ValueEventListener() {
+        table.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                ArrayList<String> allKeys = new ArrayList<>();
                 ArrayList<Category> allFood = new ArrayList<>();
                 for (DataSnapshot obj : snapshot.getChildren()) {
                     Category category = obj.getValue(Category.class);
                     allFood.add(category);
+                    allKeys.add(obj.getKey());
 
-                    FoodListAdapter arrayAdapter = new FoodListAdapter(FoodPage.this, R.layout.food_item_in_list, allFood);
+                    FoodListAdapter arrayAdapter = new FoodListAdapter(FoodPage.this, R.layout.food_item_in_list, allFood, allKeys);
                     listView.setAdapter(arrayAdapter);
                 }
             }

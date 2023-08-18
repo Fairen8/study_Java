@@ -17,8 +17,15 @@ import androidx.annotation.Nullable;
 import com.example.ordy.FoodDetail;
 import com.example.ordy.Models.Category;
 import com.example.ordy.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class FoodListAdapter extends ArrayAdapter<Category> {
 
@@ -26,13 +33,15 @@ public class FoodListAdapter extends ArrayAdapter<Category> {
     private List<Category> categories;
     private int layoutListRow;
     private Context context;
+    private ArrayList<String> allKeys;
 
-    public FoodListAdapter(@NonNull Context context, int resource, @NonNull List<Category> objects) {
+    public FoodListAdapter(@NonNull Context context, int resource, @NonNull List<Category> objects, ArrayList<String> allKeys) {
         super(context, resource, objects);
 
         categories = objects;
         layoutListRow = resource;
         this.context = context;
+        this.allKeys = allKeys;
 
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -58,8 +67,18 @@ public class FoodListAdapter extends ArrayAdapter<Category> {
                 photo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        FoodDetail.ID = position + 1;
+                        FoodDetail.ID = Integer.parseInt(allKeys.get(position));
                         context.startActivity(new Intent(context, FoodDetail.class));
+                    }
+                });
+
+                photo.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View view) {
+                        FoodDetail.ID = Integer.parseInt(allKeys.get(position));
+
+                        FoodDetail.delete(context, category.getName());
+                        return false;
                     }
                 });
 
